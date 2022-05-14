@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/* ===================== Navbar Part css Start ====================== */
+
+#navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.header-main {
+    display: flex;
+}
+
+.logo {
+    width: 30%;
+}
+
+.logo img {
+    padding-top: 30px;
+}
+
+.menu {
+    width: 70%;
+    text-align: right;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding-left: 60px;
+}
+
+
+.menu ul li a {
+    line-height: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.menu ul li a:hover {
+    color: #fce38a;
+}
+
+.menu ul li a::after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #fce38a;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* ========================== Banner Part css Start ========================== */
+
+#banner {
+    background: url(../images/banner.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 233px;
+    padding-bottom: 227px;
+    position: relative;
+}
+
+#banner::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 204, 153, 0.9), rgba(255, 153, 153, 0.9));
+}
+
+.banner-text {
+    text-align: center;
+    position: relative;
+    z-index: 9;
+}
+
+.banner-text h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 72px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.banner-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 150px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0 100px;
+    padding-bottom: 70px;
+    position: relative;
+}
+
+.banner-text h1::after {
+    position: absolute;
+    content: '';
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.banner-text a {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: 3px solid #fff;
+    padding: 12px 7px;
+}
+
+/* ========================= Team Part css Start ========================== */
+
+#team {
+    padding-top: 100px;
+    padding-bottom: 110px;
+}
+
+.team-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-item {
+    width: 370px;
+    position: relative;
+    cursor: pointer;
+}
+
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 153, 153, 0.9), rgba(255, 204, 153, 0.9));
+    opacity: 0;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.team-item:hover .team-overlay {
+    opacity: 1;
+}
+
+.team-item img {
+    width: 100%;
+}
+
+.team-text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.team-text i {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.team-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18PX;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+/* =================== Counter Part css Start ========================== */
+
+#counter {
+    background: #95e1d3;
+    padding: 90px 0;
+}
+
+.counter-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter-item {
+    width: 200px;
+    text-align: center;
+}
+
+.counter-item h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: #ffff;
+}
+
+.counter-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffff;
+}
+
+/* ================ Service Part css Start ========================== */
+
+#service {
+    padding-top: 110px;
+}
+
+.common-head {
+    text-align: center;
+}
+
+.common-head h3 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.common-head h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #333333;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.common-head h2::after {
+    position: absolute;
+    content: '';
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #f38181;
+}
+
+.service-main {
+    margin-top: 105px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-item {
+    width: 343px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 105px;
+}
+
+.service-img {
+    width: 35px;
+}
+
+.service-text {
+    width: 300px;
+}
+
+.service-text h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+}
+
+.service-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+    line-height: 24px;
+}
+
+/* ================= Review Part css Start ====================== */
+
+#review {
+    background: #f8f8f8;
+    padding: 70px 0;
+}
+
+.review-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-left {
+    width: 214px;
+    text-align: center;
+}
+
+.review-left i {
+    font-size: 50px;
+    color: #95e1d3;
+    width: 145px;
+    height: 145px;
+    border: 3px solid #95e1d3;
+    line-height: 145px;
+    text-align: center;
+}
+
+.review-right {
+    width: 894px;
+}
+
+.review-right p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #999999;
+    line-height: 36px;
+}
+
+.review-right h5 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    font-weight: 400;
+    color: #333333;
+    padding-left: 67px;
+    position: relative;
+}
+
+.review-right h5::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 3px;
+    background: #f38181;
+}
+
+.arrow {
+    position: relative;
+}
+
+.arrow i {
+    color: #cccccc;
+}
+
+.arrow .prv {
+    position: absolute;
+    left: 0;
+    top: 70px;
+}
+
+.arrow .nxt {
+    position: absolute;
+    right: -11px;
+    top: 70px;
+}
+
+/* =========== Team Part css Start ======================= */
+
+#team2 {
+    padding-top: 110px;
+    padding-bottom: 95px;
+}
+
+.team-text p {
+    padding-top: 120px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+}
+
+.team2-item {
+    width: 370px;
+}
+
+.team2-img img {
+    width: 100%;
+}
+
+.team2-img {
+    position: relative;
+}
+
+.team2-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-image: linear-gradient(rgba(255, 153, 153, 0.9), rgba(255, 204, 153, 0.9));
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.team2-img:hover .team2-overlay {
+    opacity: 1;
+    height: 100%;
+}
+
+.team2-icon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.team2-icon i {
+    width: 60px;
+    height: 60px;
+    background: #fce38a;
+    line-height: 60px;
+    text-align: center;
+    color: #f38181;
+    font-size: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-right: -3px;
+}
+
+.team2-icon i:hover {
+    color: #fff;
+    background: #f38181;
+}
+
+.team2-item-text {
+    text-align: center;
+}
+
+.team2-item-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 25px;
+}
+
+.team2-item-text h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    padding-top: 10px;
+}
+
+.team2-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ======================== Gallery Part css Start ===================== */
+
+#gallery {
+    padding-bottom: 90px;
+}
+
+.gal-main {
+    display: flex;
+}
+
+.gal-item {
+    width: 25%;
+}
+
+.gal-img img {
+    width: 100%;
+}
+
+.gal-img {
+    position: relative;
+}
+
+.gal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 153, 153, 0.9), rgba(255, 204, 153, 0.9));
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.gal-img:hover .gal-overlay {
+    opacity: 1;
+}
+
+.gal-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.gal-text i {
+    color: #fff;
+}
+
+.gal-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.gal-text h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* ========================= Footer Part css Start ============================= */
+
+#footer {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    background: #f8f8f8;
+}
+
+#footer .footer-main {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+}
+
+#footer .footer-main .footer-left {
+    width: 466px;
+}
+
+#footer .footer-main .footer-mid {
+    width: 340px;
+}
+
+#footer .footer-main .footer-right {
+    width: 270px;
+}
+
+#footer .footer-main .footer-left p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+    line-height: 24px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+}
+
+#footer .footer-main .footer-left h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #333333;
+    font-weight: 400;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#footer .footer-main .footer-left h5 span {
+    font-weight: 700;
+}
+
+#footer .footer-main .footer-left h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    color: #999999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#footer .footer-main .footer-left h4 i {
+    color: #95e1d3;
+}
+
+#footer .footer-main .footer-left .mail form input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #e7e7e7;
+    padding-left: 12px;
+}
+
+#footer .footer-main .footer-left .mail {
+    position: relative;
+}
+
+#footer .footer-main .footer-left .mail form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 11px 35px;
+    background: #95e1d3;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#footer .footer-main .footer-left .mail form input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    color: #cccccc;
+}
+
+
+#footer .footer-main .footer-mid .footer-mid-main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#footer .footer-main .footer-mid .footer-mid-img {
+    width: 120px;
+}
+
+#footer .footer-main .footer-mid .footer-mid-txt {
+    width: 190px;
+}
+
+#footer .footer-main .footer-right .footer-right-main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#footer .footer-main .footer-right .footer-right-main .footer-right-item{
+    width: 33%;
+    margin-top: 3px;
+}
+
+#footer .copyright{
+    text-align: center;
+}
+
+#footer .copyright p{
+    padding-top: 50px;
+}
+
+#footer .copyright span{
+    color: #f4a4a4;
+}
